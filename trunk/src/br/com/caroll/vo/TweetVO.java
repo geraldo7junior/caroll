@@ -1,10 +1,19 @@
 package br.com.caroll.vo;
 
 public class TweetVO {
+	
+	private int idTweet;
 	private String postTweet;
 	private String dataTweet;
 	private int usuarioFk;
 	private int sentimentoFk;
+	
+	public int getIdTweet() {
+		return idTweet;
+	}
+	public void setIdTweet(int idTweet) {
+		this.idTweet = idTweet;
+	}
 	
 	public String getPostTweet() {
 		return postTweet;
