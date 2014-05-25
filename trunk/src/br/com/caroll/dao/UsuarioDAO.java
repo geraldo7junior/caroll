@@ -15,15 +15,15 @@ public class UsuarioDAO {
 	Connection con;
 	
 	
-	UsuarioDAO () throws ClassNotFoundException, SQLException {
+	public UsuarioDAO () throws ClassNotFoundException, SQLException {
 		
 		this.con = new ConnectionFactory().getConnection();
 	}
 	
 	public void inserir (UsuarioVO usuarioVO) {
 		
-		String sql = "INSERT INTO Usuario (nomeUsuario, loginUsuario, sexoUsuario"
-				+ "dataNascimentoUsuario) VALUES (?,?,?,?)) ";
+		String sql = "INSERT INTO Usuario (nomeUsuario, loginUsuario, sexoUsuario, "
+				+ "dataNascimentoUsuario) VALUES (?,?,?,?) ";
 		
 		try {
 			
@@ -46,12 +46,12 @@ public class UsuarioDAO {
 		
 		List <UsuarioVO> listaUsuario = new ArrayList<UsuarioVO>();
 		
-		String sql = "SELECT * FROM Usuario WHERE id = ?";
+		String sql = "SELECT * FROM Usuario WHERE loginUsuario = ?";
 		
 		try { 
 			
 			PreparedStatement stmt = con.prepareStatement(sql);
-			stmt.setInt(1, usuarioVO.getIdUsuario());
+			stmt.setString(1, usuarioVO.getLoginUsuario());
 			ResultSet rs = stmt.executeQuery();
 
 			
@@ -60,8 +60,8 @@ public class UsuarioDAO {
 				usuarioVO.setIdUsuario(rs.getInt("idUsuario"));
 				usuarioVO.setNomeUsuario(rs.getString("nomeUsuario"));
 				usuarioVO.setLoginUsuario(rs.getString("loginUsuario"));
-				usuarioVO.setSexoUsuario(rs.getString("sexoUsuario"));
-				usuarioVO.setDataNascimentoUsuario("dataNascimentoUsuario");
+				//usuarioVO.setSexoUsuario(rs.getString("sexoUsuario"));
+				//usuarioVO.setDataNascimentoUsuario("dataNascimentoUsuario");
 				
 				 listaUsuario.add(usuarioVO);
 			}
