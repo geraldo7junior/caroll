@@ -2,10 +2,17 @@ package br.com.caroll.vo;
 
 public class UsuarioVO {
 	
+	private int idUsuario;
     private String nomeUsuario;
     private String loginUsuario;
     private String sexoUsuario;
     private String dataNascimentoUsuario;
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 	public String getNomeUsuario() {
 		return nomeUsuario;
 	}
