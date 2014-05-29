@@ -11,7 +11,7 @@ public class FavoritoDAO {
 	
 	Connection con;
 	
-	FavoritoDAO () throws ClassNotFoundException, SQLException {
+	public FavoritoDAO () throws ClassNotFoundException, SQLException {
 		this.con = new ConnectionFactory().getConnection();
 	
 		
