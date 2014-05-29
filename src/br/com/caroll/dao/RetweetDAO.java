@@ -16,7 +16,7 @@ Connection con;
 	
 	public void inserir (RetweetVO retweetVO) {
 		
-		String sql = "INSERT Resposta (idReposta, Tweet_idTweet) VALUES (?, ?)";
+		String sql = "INSERT ReTweet (idRetweet, Tweet_idTweet) VALUES (?, ?)";
 		
 		try {
 			

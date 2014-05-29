@@ -1,0 +1,16 @@
+
+
+SELECT Usuario.idUsuario, Usuario.NomeUsuario, Usuario.loginUsuario,  
+Tweet.postTweet, Tweet.dataTweet, Hashtag.dadoHashtag FROM Usuario, Tweet, Hashtag, Hashtag_has_Tweet WHERE idUsuario = Usuario_idUsuario AND 
+idTweet = Tweet_idTweet AND idHashtag = Hashtag_idHashtag 
+
+
+Como executar: 
+
+Rode o comando sql acima em seu SGBD;
+Importe o projeto para o eclipe
+insirar o driver do Mysql na pasta lib
+No arquivo br.com.Caroll.Connection.ConnectionFactory insira as informações de seu SGBG;
+Para executar o programa rode o arquivo br.com.caroll.teste.PesquisaTermoTeste
+
+
