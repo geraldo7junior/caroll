@@ -7,10 +7,9 @@ idTweet = Tweet_idTweet AND idHashtag = Hashtag_idHashtag
 
 Como executar: 
 
-Rode o comando sql acima em seu SGBD;
+execute o script caroll.sql em seu cliente sgbd
 Importe o projeto para o eclipe
 insirar o driver do Mysql na pasta lib
 No arquivo br.com.Caroll.Connection.ConnectionFactory insira as informações de seu SGBG;
 Para executar o programa rode o arquivo br.com.caroll.teste.PesquisaTermoTeste
-
 
