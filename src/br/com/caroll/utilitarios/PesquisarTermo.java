@@ -121,7 +121,7 @@ public class PesquisarTermo {
 						respostaDao.inserir(respostaVo);
 					}
 					
-					System.out.println("passou do retweet");
+					//System.out.println("passou do retweet");
 					
 					RetweetDAO retweetDao = new RetweetDAO ();
 					RetweetVO retweetVo = new RetweetVO();
@@ -140,7 +140,7 @@ public class PesquisarTermo {
 					
 			    	if (hashtags.length != 0) {
 			    		
-			    		System.out.println("Esse tweet possui hashtags!");
+			    		//System.out.println("Esse tweet possui hashtags!");
 			    		for (int i = 0; i < hashtags.length; i++) {
 			    			
 			    			hashTagVO.setDadoHashtag(hashtags[i].getText());
@@ -176,17 +176,17 @@ public class PesquisarTermo {
 			    	}
 			    	System.out.println("Informações pesquisadas e inseridas no banco com sucesso \n");
 			    	
-			    	/*Sentimento sentimento = new Sentimento ();
+			    	Sentimento sentimento = new Sentimento ();
 			    	
 			    	Classificador classificador = new Classificador();
 			    	
-			      classificador.vocabulario.add("felicidade");
+			     // classificador.vocabulario.add("felicidade");
 			    	
-			       String [] matriz = classificador.getSentencaAnalisadaBayes("felicidade");
+			       String [] matriz = classificador.getSentencaAnalisadaBayes(status.getText());
 			    	
-			    	//System.out.println("texto: "+matriz[0]);
+			    	System.out.println("texto do tweet: "+matriz[0]);
 			    	
-			    	//System.out.println("classificacao: "+matriz[1]+"\n");*/
+			    	System.out.println("classificacao: "+matriz[1]+"\n");
 
 			  		
 			    }
