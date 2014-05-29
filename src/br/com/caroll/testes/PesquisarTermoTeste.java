@@ -11,6 +11,7 @@ public class PesquisarTermoTeste {
 		
 		PesquisarTermo pesquisarTermo = new PesquisarTermo();
 		
+		
 		pesquisarTermo.pesquisarTermo("brasil");
 	}
 }
