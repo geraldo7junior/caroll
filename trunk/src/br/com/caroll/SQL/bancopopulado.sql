@@ -18,7 +18,9 @@ SET time_zone = "+00:00";
 
 --
 -- Banco de Dados: `caroll_db`
---
+
+CREATE SCHEMA IF NOT EXISTS `caroll_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `caroll_db` ;
 
 -- --------------------------------------------------------
 
