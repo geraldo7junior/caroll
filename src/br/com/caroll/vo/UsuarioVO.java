@@ -5,8 +5,7 @@ public class UsuarioVO {
 	private int idUsuario;
     private String nomeUsuario;
     private String loginUsuario;
-    private String sexoUsuario;
-    private String dataNascimentoUsuario;
+  
 	public int getIdUsuario() {
 		return idUsuario;
 	}
@@ -25,18 +24,7 @@ public class UsuarioVO {
 	public void setLoginUsuario(String loginUsuario) {
 		this.loginUsuario = loginUsuario;
 	}
-	public String getSexoUsuario() {
-		return sexoUsuario;
-	}
-	public void setSexoUsuario(String sexoUsuario) {
-		this.sexoUsuario = sexoUsuario;
-	}
-	public String getDataNascimentoUsuario() {
-		return dataNascimentoUsuario;
-	}
-	public void setDataNascimentoUsuario(String dataNascimentoUsuario) {
-		this.dataNascimentoUsuario = dataNascimentoUsuario;
-	}
+	
     
     
 
