@@ -1,17 +1,22 @@
 package br.com.caroll.testes;
 
-import br.com.caroll.analisesentimento.Classificador;
+import java.io.FileNotFoundException;
+
+import br.com.caroll.sentimento.Classificador;
 
 public class ClassificadorTeste {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
 		Classificador classificador = new Classificador();
 		
-		int i = classificador.classificaBayesiano("ótimo dia");
+		 String [] teste = classificador.getSentencaAnalisadaScore("Muitas pessoas ainda estão presas no trânsito.");
 		
-		System.out.println("resultado: "+i);
 		
+		 for (String a : teste) {
+			 System.out.println(a);
+		 }
+		 
 	}
 
 }
