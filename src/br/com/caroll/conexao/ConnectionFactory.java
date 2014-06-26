@@ -11,7 +11,7 @@ public class ConnectionFactory{
 		
 		Class.forName ("com.mysql.jdbc.Driver");
 		
-		return DriverManager.getConnection("jdbc:mysql://localhost/caroll", "root", "mugen");
+		return DriverManager.getConnection("jdbc:mysql://localhost/caroll_db", "root", "mugen");
 	
 		
 	}
