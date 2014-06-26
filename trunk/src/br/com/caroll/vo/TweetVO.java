@@ -5,6 +5,13 @@ public class TweetVO {
 	private int idTweet;
 	private String postTweet;
 	private String dataTweet;
+	private String tipoTweet;
+	public String getTipoTweet() {
+		return tipoTweet;
+	}
+	public void setTipoTweet(String tipoTweet) {
+		this.tipoTweet = tipoTweet;
+	}
 	private int usuarioFk;
 	private int sentimentoFk;
 	
