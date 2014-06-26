@@ -22,18 +22,14 @@ public class UsuarioDAO {
 	
 	public void inserir (UsuarioVO usuarioVO) {
 		
-		String sql = "INSERT INTO Usuario (nomeUsuario, loginUsuario, sexoUsuario, "
-				+ "dataNascimentoUsuario) VALUES (?,?,?,?) ";
+		String sql = "INSERT INTO Usuario (nomeUsuario, loginUsuario) VALUES (?,?) ";
 		
 		try {
 			
 			PreparedStatement stmt = con.prepareStatement(sql);
 			
 			stmt.setString(1, usuarioVO.getNomeUsuario());
-			stmt.setString(2, usuarioVO.getLoginUsuario() );
-			stmt.setString(3, usuarioVO.getSexoUsuario() );
-			stmt.setString(4, usuarioVO.getDataNascimentoUsuario());
-			
+			stmt.setString(2, usuarioVO.getLoginUsuario() );			
 			stmt.execute();
 			stmt.close();
 			

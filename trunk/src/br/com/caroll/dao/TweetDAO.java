@@ -20,9 +20,8 @@ public class TweetDAO {
 	}
 	
 	public void inserir (TweetVO tweetVO) {
-		String sql = "INSERT INTO Tweet (postTweet, dataTweet, Usuario_idUsuario) "
-				+ "VALUES (?, ?, ?)";
-		
+		String sql = "INSERT INTO Tweet (postTweet, dataTweet, tipoTweet, "
+				+ "Usuario_idUsuario, Sentimento_idSentimento) VALUES (?, ?, ?, ?, ?)";
 		
 		try {
 			
@@ -30,9 +29,9 @@ public class TweetDAO {
 			
 			stmt.setString(1, tweetVO.getPostTweet());
 			stmt.setString(2, tweetVO.getDataTweet());
-			stmt.setInt   (3, tweetVO.getUsuarioFk());
-			
-			//stmt.setInt(4, tweetVO.getSentimentoFk());
+			stmt.setString(3, tweetVO.getTipoTweet());
+			stmt.setInt (4, tweetVO.getUsuarioFk());
+			stmt.setInt(5, tweetVO.getSentimentoFk());
 			
 			stmt.execute();
 			stmt.close();
