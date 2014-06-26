@@ -28,10 +28,9 @@ Connection con;
 			stmt.setFloat (1, localVO.getLatitudeLocal());
 			stmt.setFloat (2, localVO.getLongitudeLocal());
 			stmt.setString(3, localVO.getCidadeLocal());
-			stmt.setString(4, localVO.getCidadeLocal());
-			stmt.setString(5, localVO.getEstadoLocal());
-			stmt.setString(6, localVO.getPaisLocal());
-			stmt.setInt   (7, localVO.getTweetFk());
+			stmt.setString(4, localVO.getEstadoLocal());
+			stmt.setString(5, localVO.getPaisLocal());
+			stmt.setInt   (6, localVO.getTweetFk());
 
 			stmt.execute();
 			
